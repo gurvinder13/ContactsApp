@@ -27,17 +27,4 @@ public abstract class AppDatabase extends RoomDatabase {
         return INSTANCE;
     }
 
-    public static AppDatabase getMemoryDatabase(Context context) {
-        if (INSTANCE == null) {
-            INSTANCE = Room.inMemoryDatabaseBuilder(context.getApplicationContext(), AppDatabase.class)
-                    .allowMainThreadQueries()
-                    .build();
-        }
-        return INSTANCE;
-    }
-
-    public static void destroyInstance() {
-        INSTANCE = null;
-    }
-
 }

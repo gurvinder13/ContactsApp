@@ -5,7 +5,7 @@
     <string name="no_contacts">You have no contacts, add some.</string>
     <string name="invalid_phone">Invalid Phone no</string>
     <string name="invalid_name">Invalid Name</string>
-    <string name="name">Name</string>
-    <string name="phone">Phone</string>
+    <string name="name">Contact Name</string>
+    <string name="phone">Mobile Number</string>
 
 </resources>

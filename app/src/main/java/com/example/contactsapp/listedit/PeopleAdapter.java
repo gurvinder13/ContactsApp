@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -43,14 +44,13 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
                 mOnItemClickListener.clickItem(holder.mItem);
             }
         });
-
-        holder.mView.setOnLongClickListener(new View.OnLongClickListener() {
+        holder.ivDelete.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onLongClick(View v) {
+            public void onClick(View v) {
                 mOnItemClickListener.clickLongItem(holder.mItem);
-                return false;
             }
         });
+
     }
 
     @Override
@@ -71,6 +71,7 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
         public final View mView;
         public final TextView nameTextView;
         public final TextView phoneTextView;
+        ImageView ivDelete;
         public Person mItem;
 
         public ViewHolder(View view) {
@@ -78,6 +79,7 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
             mView = view;
             nameTextView = (TextView) view.findViewById(R.id.nameTextView);
             phoneTextView = (TextView) view.findViewById(R.id.phoneTextView);
+            ivDelete = view.findViewById(R.id.ivDelete);
 
         }
     }

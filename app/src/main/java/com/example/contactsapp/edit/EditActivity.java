@@ -69,7 +69,7 @@ public class EditActivity extends AppCompatActivity implements EditContract.View
         mPhoneTextInputLayout = (TextInputLayout) findViewById(R.id.phoneTextInputLayout);
 
         button = findViewById(R.id.update);
-        button.setText(mEditMode ? "Update" : "Add");
+        button.setText(mEditMode ? "Update" : "Done");
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -53,5 +53,11 @@
             tools:text="00000000" />
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/cancal" />
 
 </LinearLayout>
